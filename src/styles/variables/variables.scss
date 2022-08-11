@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+// COLOR
+$clr-red: #ff6060;
+$clr-grey: #f7f7f7;
+
+// FONTS
+$font: "Montserrat", sans-serif;
+
+// BREAKPOINTS
+$breakpoints: (
+  "xs": 375px,
+  "sm": 480px,
+  "md-sm": 580px,
+  "md": 720px,
+  "md-lg": 780px,
+  "lg": 960px,
+  "xl": 1250px,
+);
+
+@mixin xs {
+  @media (max-width: map-get($breakpoints, "xs")) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: map-get($breakpoints, "sm")) {
+    @content;
+  }
+}
+
+@mixin md-sm {
+  @media (max-width: map-get($breakpoints, "md-sm")) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: map-get($breakpoints, "md")) {
+    @content;
+  }
+}
+
+@mixin md-lg {
+  @media (max-width: map-get($breakpoints, "md-lg")) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: map-get($breakpoints, "lg")) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: map-get($breakpoints, "xl")) {
+    @content;
+  }
+}

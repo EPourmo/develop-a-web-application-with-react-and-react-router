@@ -1,0 +1,55 @@
+@import "../variables/variables.scss";
+
+.card {
+  max-width: 340px;
+  height: 340px;
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  background-color: $clr-red;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  @include sm {
+    max-width: 335px;
+    height: 255px;
+  }
+
+  &__background {
+    opacity: 0.5;
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    background-size: cover;
+    mix-blend-mode: normal;
+    transition: transform 550ms cubic-bezier(0.5, 0, 0.5, 0),
+      opacity 250ms linear;
+    &:hover {
+      transform: scale(1.2);
+      opacity: 0.85;
+    }
+    @include sm {
+      max-width: 335px;
+      height: 255px;
+    }
+  }
+  &__title {
+    position: absolute;
+    left: 5.88%;
+    right: 5.88%;
+    top: 77%;
+    bottom: 5.88%;
+    font-family: $font;
+    font-size: 18px;
+    line-height: 142.6%;
+    color: #ffffff;
+
+    @include sm {
+      top: 70%;
+    }
+  }
+}
