@@ -1,0 +1,18 @@
+@import "../variables/variables.scss";
+
+.tags {
+  display: flex;
+  margin-top: 20px;
+
+  .tag {
+    font-family: $font;
+    background-color: $clr-red;
+    color: #fff;
+    font-size: 14px;
+    line-height: 142.6%;
+    text-align: center;
+    padding: 3px 30px;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+}

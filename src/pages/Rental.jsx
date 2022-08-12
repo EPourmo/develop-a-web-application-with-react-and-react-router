@@ -1,16 +1,30 @@
 import data from "../data/data.json";
 import Slider from "../components/Slider";
+import Navbar from "../components/Navbar";
+import Frame from "../components/Frame";
+import RentalTitle from "../components/RentalTitle";
+import RentalTag from "../components/RentalTag";
+import RentalHost from "../components/RentalHost";
 import { useParams } from "react-router-dom";
 
 export default function Rental() {
   const { rentalId } = useParams();
-  //   console.log(rentalId);
   const thisCard = data.find((rental) => rental.id === rentalId);
+
+  const highlight = {
+    home: false,
+    about: false,
+  };
 
   return (
     <>
-      <h1>{thisCard.title}</h1>
-      <Slider pictures={thisCard.pictures} />
+      <Frame>
+        <Navbar highlight={highlight} />
+        <Slider pictures={thisCard.pictures} />
+        <RentalTitle title={thisCard.title} location={thisCard.location} />
+        <RentalTag tags={thisCard.tags} />
+        <RentalHost name={thisCard.host.name} picture={thisCard.host.picture} />
+      </Frame>
     </>
   );
 }

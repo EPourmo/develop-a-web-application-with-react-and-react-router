@@ -1,0 +1,22 @@
+@import "../variables/variables.scss";
+
+.host {
+  color: $clr-red;
+  font-family: $font;
+  display: flex;
+  align-items: center;
+  &__name p {
+    font-size: 18px;
+    line-height: 142.6%;
+    margin: 0;
+    margin-right: 10px;
+    text-align: end;
+  }
+
+  &__picture img {
+    background: #c4c4c4;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
+}
