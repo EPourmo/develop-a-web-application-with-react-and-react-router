@@ -6,6 +6,7 @@ import RentalTitle from "../components/RentalTitle";
 import RentalTag from "../components/RentalTag";
 import RentalHost from "../components/RentalHost";
 import { useParams } from "react-router-dom";
+import RentalStar from "../components/RentalStar";
 
 export default function Rental() {
   const { rentalId } = useParams();
@@ -24,6 +25,7 @@ export default function Rental() {
         <RentalTitle title={thisCard.title} location={thisCard.location} />
         <RentalTag tags={thisCard.tags} />
         <RentalHost name={thisCard.host.name} picture={thisCard.host.picture} />
+        <RentalStar rate={thisCard.rating} />
       </Frame>
     </>
   );
