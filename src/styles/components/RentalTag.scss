@@ -2,7 +2,9 @@
 
 .tags {
   display: flex;
+  align-items: center;
   margin-top: 20px;
+  flex-wrap: wrap;
 
   .tag {
     font-family: $font;
@@ -14,5 +16,12 @@
     padding: 3px 30px;
     border-radius: 10px;
     margin-right: 10px;
+
+    @include sm {
+      font-size: 10px;
+      margin-right: 10px;
+      margin-bottom: 5px;
+      padding: 3px 25px;
+    }
   }
 }

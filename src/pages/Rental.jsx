@@ -7,6 +7,7 @@ import RentalTag from "../components/RentalTag";
 import RentalHost from "../components/RentalHost";
 import { useParams } from "react-router-dom";
 import RentalStar from "../components/RentalStar";
+import "../styles/pages/Rental.scss";
 
 export default function Rental() {
   const { rentalId } = useParams();
@@ -22,10 +23,20 @@ export default function Rental() {
       <Frame>
         <Navbar highlight={highlight} />
         <Slider pictures={thisCard.pictures} />
-        <RentalTitle title={thisCard.title} location={thisCard.location} />
-        <RentalTag tags={thisCard.tags} />
-        <RentalHost name={thisCard.host.name} picture={thisCard.host.picture} />
-        <RentalStar rate={thisCard.rating} />
+        <div className="rental__details">
+          <div className="title_tags">
+            <RentalTitle title={thisCard.title} location={thisCard.location} />
+            <RentalTag tags={thisCard.tags} />
+          </div>
+          <div className="host-star">
+            <RentalHost
+              name={thisCard.host.name}
+              picture={thisCard.host.picture}
+              className="host"
+            />
+            <RentalStar rate={thisCard.rating} />
+          </div>
+        </div>
       </Frame>
     </>
   );

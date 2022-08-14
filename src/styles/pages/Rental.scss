@@ -1,0 +1,24 @@
+@import "../variables/variables.scss";
+.rental__details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  @include md-lg {
+    display: block;
+  }
+  .host-star {
+    margin: 0;
+    align-items: center;
+    justify-content: space-between;
+    @include md-lg {
+      display: flex;
+      margin-top: 16px;
+    }
+    .host {
+      @include md-lg {
+        order: 2;
+      }
+    }
+  }
+}

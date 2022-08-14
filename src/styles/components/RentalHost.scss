@@ -5,12 +5,23 @@
   font-family: $font;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  margin-top: 24px;
+  @include sm {
+    margin-top: 0;
+  }
+
   &__name p {
     font-size: 18px;
     line-height: 142.6%;
     margin: 0;
     margin-right: 10px;
     text-align: end;
+
+    @include sm {
+      font-size: 12px;
+      margin-right: 10.5px;
+    }
   }
 
   &__picture img {
@@ -18,5 +29,9 @@
     width: 64px;
     height: 64px;
     border-radius: 50%;
+    @include sm {
+      width: 32px;
+      height: 32px;
+    }
   }
 }
