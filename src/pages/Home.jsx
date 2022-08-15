@@ -4,6 +4,7 @@ import Card from "../components/Card";
 import data from "../data/data.json";
 import Wrapper from "../components/Wrapper";
 import Frame from "../components/Frame";
+import Footer from "../components/Footer";
 import "../styles/normalize.css";
 import "../styles/pages/app.scss";
 
@@ -30,6 +31,7 @@ export default function Home() {
         <Banner homepage={true} />
         <Wrapper>{cards}</Wrapper>
       </Frame>
+      <Footer />
     </>
   );
 }

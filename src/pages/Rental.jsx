@@ -7,6 +7,7 @@ import RentalTag from "../components/RentalTag";
 import RentalHost from "../components/RentalHost";
 import { useParams } from "react-router-dom";
 import RentalStar from "../components/RentalStar";
+import Footer from "../components/Footer";
 import "../styles/pages/Rental.scss";
 
 export default function Rental() {
@@ -38,6 +39,7 @@ export default function Rental() {
           </div>
         </div>
       </Frame>
+      <Footer />
     </>
   );
 }
