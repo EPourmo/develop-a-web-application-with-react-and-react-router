@@ -1,9 +1,9 @@
 @import "../variables/variables.scss";
 .rental__details {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   margin: 0;
+  margin-top: 30px;
   @include md-lg {
     display: block;
   }
@@ -13,12 +13,49 @@
     justify-content: space-between;
     @include md-lg {
       display: flex;
-      margin-top: 16px;
+      margin-top: 14px;
     }
     .host {
       @include md-lg {
         order: 2;
       }
+    }
+  }
+}
+
+.collapes {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 24px;
+  @include sm {
+    margin-top: 16px;
+  }
+
+  @include lg {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .collapse__description {
+    max-width: 582px;
+    width: 100%;
+    margin-right: 20px;
+    @include lg {
+      margin: 0;
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
+  }
+
+  .collapse__equipements {
+    max-width: 582px;
+    width: 100%;
+
+    @include lg {
+      max-width: 100%;
     }
   }
 }

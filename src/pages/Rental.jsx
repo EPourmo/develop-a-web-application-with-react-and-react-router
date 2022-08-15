@@ -8,6 +8,7 @@ import RentalHost from "../components/RentalHost";
 import { useParams } from "react-router-dom";
 import RentalStar from "../components/RentalStar";
 import Footer from "../components/Footer";
+import Collapse from "../components/Collapse";
 import "../styles/pages/Rental.scss";
 
 export default function Rental() {
@@ -33,9 +34,25 @@ export default function Rental() {
             <RentalHost
               name={thisCard.host.name}
               picture={thisCard.host.picture}
-              className="host"
             />
             <RentalStar rate={thisCard.rating} />
+          </div>
+        </div>
+        <div className="collapes">
+          <div className="collapse__description">
+            <Collapse
+              title="Description"
+              content={thisCard.description}
+              listOfElement={false}
+              className="first"
+            />
+          </div>
+          <div className="collapse__equipements">
+            <Collapse
+              title="Équipements"
+              content={thisCard.equipments}
+              listOfElement={true}
+            />
           </div>
         </div>
       </Frame>
