@@ -6,19 +6,19 @@
   @include sm {
     margin-top: 15px;
   }
-
   .rental__title {
     font-size: 36px;
     line-height: 142.6%;
+    font-weight: 500;
     margin: 0;
     @include sm {
       font-size: 18px;
     }
   }
-
   .rental__location {
     font-size: 18px;
     line-height: 142.6%;
+    font-weight: 500;
     margin: 0;
     @include sm {
       margin-top: 5px;
