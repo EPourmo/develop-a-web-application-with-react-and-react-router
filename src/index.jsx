@@ -4,8 +4,8 @@ import App from "./pages/App";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Rental from "./pages/Rental";
+import Error from "./pages/Error";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
-// import './index.css'
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -16,6 +16,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         </Route>
         <Route path="/rentals/:rentalId" element={<Rental />} />
         <Route path="/about" element={<About />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </Router>
   </React.StrictMode>
