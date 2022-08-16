@@ -39,6 +39,10 @@
     a {
       text-decoration: none;
       color: inherit;
+      &:hover {
+        opacity: 0.85;
+        transform: scale(1.05);
+      }
     }
     :first-child {
       margin-right: 57px;

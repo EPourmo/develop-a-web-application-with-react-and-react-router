@@ -58,6 +58,10 @@
     }
     p {
       margin: 0;
+      &:hover {
+        opacity: 0.85;
+        transform: scale(1.1);
+      }
     }
   }
 }
