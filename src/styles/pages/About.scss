@@ -1,0 +1,19 @@
+@import "../variables/variables.scss";
+
+.about {
+  @include sm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+
+  &__collapse {
+    max-width: 1023px;
+    margin: 0 auto;
+    margin-bottom: 31px;
+    @include sm {
+      margin-bottom: 20px;
+    }
+  }
+}
