@@ -1,9 +1,9 @@
 import Home from "./Home";
 
-function App() {
+function App({ data }) {
   return (
     <>
-      <Home />
+      <Home rentals={data} />
     </>
   );
 }

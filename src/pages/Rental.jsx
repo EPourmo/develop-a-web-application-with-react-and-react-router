@@ -1,4 +1,3 @@
-import data from "../data/data.json";
 import Slider from "../components/Slider";
 import Navbar from "../components/Navbar";
 import Frame from "../components/Frame";
@@ -11,19 +10,19 @@ import Footer from "../components/Footer";
 import Collapse from "../components/Collapse";
 import "../styles/pages/Rental.scss";
 
-export default function Rental() {
+export default function Rental({ data }) {
   const { rentalId } = useParams();
   const thisCard = data.find((rental) => rental.id === rentalId);
-
-  const highlight = {
-    home: false,
-    about: false,
-  };
 
   return (
     <>
       <Frame>
-        <Navbar highlight={highlight} />
+        <Navbar
+          highlight={{
+            home: false,
+            about: false,
+          }}
+        />
         <Slider pictures={thisCard.pictures} />
         <div className="rental__details">
           <div className="title_tags">

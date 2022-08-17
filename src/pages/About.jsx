@@ -8,11 +8,6 @@ import "../styles/normalize.css";
 import "../styles/pages/About.scss";
 
 export default function About() {
-  const highlight = {
-    home: false,
-    about: true,
-  };
-
   const aboutCollapes = aboutData.map((element, index) => {
     return (
       <div className="about__collapse" key={index}>
@@ -28,7 +23,12 @@ export default function About() {
   return (
     <div className="about">
       <Frame>
-        <Navbar highlight={highlight} />
+        <Navbar
+          highlight={{
+            home: false,
+            about: true,
+          }}
+        />
         <Banner homepage={false} />
         {aboutCollapes}
       </Frame>
