@@ -8,8 +8,8 @@ import "../styles/normalize.css";
 
 import { Link } from "react-router-dom";
 
-export default function Home({ rentals }) {
-  const cards = rentals.map((rental) => {
+export default function Home({ data }) {
+  const cards = data.map((rental) => {
     return (
       <Link to={`/rentals/${rental.id}`} key={rental.id}>
         <Card image={rental.cover} title={rental.title} />
