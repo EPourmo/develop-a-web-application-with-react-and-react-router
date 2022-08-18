@@ -1,11 +1,5 @@
 @import "../variables/variables.scss";
 
-.error__page {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-}
 .error {
   text-align: center;
   color: $clr-red;
